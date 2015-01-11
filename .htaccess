@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule  ^$ %{DOCUMENT_ROOT}/public/    [L]
+    RewriteRule  (.*) %{DOCUMENT_ROOT}/public/$1 [L]
+</IfModule>
