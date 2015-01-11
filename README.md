@@ -2,19 +2,19 @@
 This is a Boilerplate template written in PHP Phalcon Framework. Its purpose is to get you up and running for your application development. It includes:
 
 * Authentication and ACL
-    ** Uses security plugin for authentication and roles based ACL management.
+    * Uses security plugin for authentication and roles based ACL management.
 * Session
 * Database Abstraction Layer
-    ** Uses Phalcon MySQL Adaptor.
+    * Uses Phalcon MySQL Adaptor.
 * CRUD (Create, Read, Update and Delete)
-    ** Provides sample for CRUD actions on a Model.
+    * Provides sample for CRUD actions on a Model.
 * Pagination
 * Third party libraries
-    ** Provides example on how to integrate third party libraries in your application.
+    * Provides example on how to integrate third party libraries (PHPExcel, PHPMailer) in your application.
 * Logging
-    ** Provides application and database logging.
+    * Provides application and database logging.
 * Grunt Integration
-    ** Uses Grunt.js to concat and minify javascript and css files for production deployment.
+    * Uses Grunt.js to concat and minify javascript and css files for production deployment.
 
 ## Get Started
 ### Phalcon Framework
@@ -47,3 +47,5 @@ This example uses MySQL database. Use the included sql file to setup and initail
 | Adminstrators | admin@test.com | admin12345 | Access to all sections for the site |
 | Users | user@test.com | user12345 | Access to only certain sections for the site |
 
+## Disclaimer
+I am using minimal features of a template from [bootstraphunter](https://bootstraphunter.com). You are required to purchase your own template.
