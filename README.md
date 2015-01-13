@@ -1,5 +1,5 @@
 # phalcon-boilerplate
-This is a Boilerplate template written in PHP Phalcon Framework. Its purpose is to get you up and running for your application development. It includes:
+This is a boilerplate template written in PHP Phalcon Framework. Its purpose is to get you up and running for your web application development. It includes:
 
 * Authentication and ACL
     * Uses security plugin for authentication and roles based ACL management.
@@ -29,7 +29,6 @@ My current Apache is on version 2.4.9. Here is sample configuration to get the s
         ServerAdmin <your-email-address>
         DocumentRoot "/Library/WebServer/Documents/phalcon-boilerplate/"
         DirectoryIndex "index.html" "index.php"
-        AddType application/x-httpd-php html
         <Directory "/Library/WebServer/Documents/phalcon-boilerplate/">
             Options +Indexes +FollowSymLinks +MultiViews +Includes
             AllowOverride All
@@ -44,10 +43,12 @@ This example uses MySQL database. Use the included sql file to setup and initail
 
 ### Testing Accounts
 
+The following accounts are setup in database for testing.
+
 | User Type | Email | Password | Notes |
 | :-------- | :---- | :------- | :---- |
-| Adminstrators | admin@test.com | admin12345 | Access to all sections for the site |
-| Users | user@test.com | user12345 | Access to only certain sections for the site |
+| Adminstrators | admin@test.com | admin12345 | Access to all sections of the application |
+| Users | user@test.com | user12345 | Access to only certain sections of the application |
 
 ## Screen shots
 
