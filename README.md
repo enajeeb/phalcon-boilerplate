@@ -37,6 +37,8 @@ My current Apache is on version 2.4.9. Here is sample configuration to get the s
         </Directory>
     </VirtualHost>
 
+After the above configuration, you should be able to load the page using http://localhost:9003
+
 ### Setup Database
 This example uses MySQL database. Use the included sql file to setup and initailize your database.
 
@@ -46,6 +48,17 @@ This example uses MySQL database. Use the included sql file to setup and initail
 | :-------- | :---- | :------- | :---- |
 | Adminstrators | admin@test.com | admin12345 | Access to all sections for the site |
 | Users | user@test.com | user12345 | Access to only certain sections for the site |
+
+## Screen shots
+
+### Sign In
+![Sign In](https://raw.github.com/enajeeb/phalcon-boilerplate/master/public/img/app/screenshot-login-page.png)
+
+### Dashboard
+![Dashboard](https://raw.github.com/enajeeb/phalcon-boilerplate/master/public/img/app/screenshot-dashboard.png)
+
+### List Page
+![List Page](https://raw.github.com/enajeeb/phalcon-boilerplate/master/public/img/app/screenshot-list-page.png)
 
 ## Disclaimer
 I am using minimal features of a template from [bootstraphunter](https://bootstraphunter.com). You are required to purchase your own template.
