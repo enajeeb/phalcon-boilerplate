@@ -25,7 +25,7 @@
         'logDir'                   => ROOT_PATH . '/app/logs/',
         'utilsDir'                 => ROOT_PATH . '/app/utils/',
         'securityDir'              => ROOT_PATH . '/app/cache/security/',
-        'thirdPartyDir'            => ROOT_PATH . '/app/thirdparty/',
+        'vendorDir'                => ROOT_PATH . '/vendor',
         'baseUri'                  => '',
         'appTitle'                 => 'Phalcon Boilerplate',
         'appName'                  => 'phalcon-boilerplate',

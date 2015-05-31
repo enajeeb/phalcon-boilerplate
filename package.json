@@ -1,5 +1,5 @@
 {
-    "name": "phalcon-boilerplate",
+    "name": "enajeeb/phalcon-boilerplate",
     "version": "1.0.0",
     "description": "Using Grunt to concat js and css files for production deployment",
 

@@ -1,0 +1,9 @@
+{
+    "name": "enajeeb/phalcon-boilerplate",
+    "version": "1.0.0",
+    "description": "Using composer for thrid party libraries",
+    "require": {
+        "phpoffice/phpexcel": "1.8.*",
+        "phpmailer/phpmailer": "5.2.*"
+    }
+}

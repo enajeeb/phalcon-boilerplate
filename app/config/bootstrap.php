@@ -190,8 +190,8 @@ class Bootstrap {
         // Register third party classes
         $loader->registerClasses(
             array(
-                "PHPMailer" => $config->application->thirdPartyDir . "PHPMailer/class.phpmailer.php",
-                "PHPExcel"  => $config->application->thirdPartyDir . "PHPExcel/PHPExcel.php"
+                "PHPMailer" => $config->application->vendorDir . "/phpmailer/phpmailer/class.phpmailer.php",
+                "PHPExcel"  => $config->application->vendorDir . "/phpoffice/phpexcel/Classes/PHPExcel.php"
             )
         );
 
