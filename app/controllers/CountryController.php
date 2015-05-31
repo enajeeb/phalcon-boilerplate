@@ -1,11 +1,13 @@
 <?php
 
-class CountryController extends \ControllerBase {
+class CountryController extends \ControllerBase
+{
 
     /*
     * This method is executed first before any other methods
     */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
 
         // breadcrumb
@@ -16,10 +18,8 @@ class CountryController extends \ControllerBase {
         $this->view->pageTitleIcon = '<i class="fa-fw fa fa-flag"></i>';
     }
 
-    /**
-    * ACL: all
-    */
-    public function indexAction() {
+    public function indexAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Countries';
@@ -104,7 +104,8 @@ class CountryController extends \ControllerBase {
 
     }
 
-    public function addAction() {
+    public function addAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Add Country';
@@ -154,7 +155,8 @@ class CountryController extends \ControllerBase {
 
     } // add
 
-    public function editAction( $id = null ) {
+    public function editAction( $id = null )
+    {
 
         if ( empty($id) ) {
             
@@ -181,7 +183,6 @@ class CountryController extends \ControllerBase {
             )
         ));
 
-        // invalid ftp
         if ( empty($country) ) {
 
             $this->getFlashSession('error', 'Invalid country.', true);
@@ -228,7 +229,8 @@ class CountryController extends \ControllerBase {
 
     } // edit
 
-    public function deleteAction( $id = null ) {
+    public function deleteAction( $id = null )
+    {
 
         if ( empty($id) ) {
             

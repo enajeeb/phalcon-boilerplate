@@ -25,7 +25,8 @@ use Phalcon\DI\FactoryDefault as PhDi,
     Phalcon\Events\Manager as EventsManager,
     Phalcon\Mvc\Dispatcher\Exception as DispatchException;
 
-class Bootstrap {
+class Bootstrap
+{
 
     private $di;
 
@@ -34,7 +35,8 @@ class Bootstrap {
     *
     * @param $di
     */
-    public function __construct( $di ) {
+    public function __construct( $di )
+    {
         $this->di = $di;
     }
 
@@ -45,7 +47,8 @@ class Bootstrap {
     *
     * @return mixed
     */
-    public function run( $options ) {
+    public function run( $options )
+    {
         $loaders = array(
             'config',
             'session',
@@ -132,7 +135,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initConfig( $options = array() ) {
+    protected function initConfig( $options = array() )
+    {
         
         $configFile = require(ROOT_PATH . '/app/config/config.php');
 
@@ -150,7 +154,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initSession( $options = array() ) {
+    protected function initSession( $options = array() )
+    {
         
         $config = $this->di['config'];
 
@@ -172,7 +177,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initLoader( $options = array() ) {
+    protected function initLoader( $options = array() )
+    {
         
         $config = $this->di['config'];
 
@@ -206,7 +212,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initUrl( $options = array() ) {
+    protected function initUrl( $options = array() )
+    {
         
         $config = $this->di['config'];
 
@@ -226,11 +233,13 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initRouter( $options = array() ) {
+    protected function initRouter( $options = array() )
+    {
 
         $config = $this->di['config'];
 
-        $this->di['router'] = function () use ($config) {
+        $this->di['router'] = function() use ($config)
+        {
 
             // Create the router without default routes (false)
             $router = new PhRouter(true);
@@ -257,12 +266,14 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initDatabase( $options = array() ) {
+    protected function initDatabase( $options = array() )
+    {
         
         $config = $this->di['config'];
 
         // setup database service
-        $this->di['db'] = function () use ($config) {
+        $this->di['db'] = function() use ($config)
+        {
 
             $connection = new PhMysql(
                 array(
@@ -280,7 +291,8 @@ class Bootstrap {
                 $logger = new PhLogFileAdapter($config->application->logDir . "/db.log");
 
                 //Listen all the database events
-                $eventsManager->attach('db', function($event, $connection) use ($logger) {
+                $eventsManager->attach('db', function($event, $connection) use ($logger)
+                {
                     if ($event->getType() == 'beforeQuery') {
                         $logger->log($connection->getSQLStatement(), \Phalcon\Logger::INFO);
                     }
@@ -300,8 +312,10 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initModelsMetadata( $options = array() ) {
-        $this->di['modelsMetadata'] = function () {
+    protected function initModelsMetadata( $options = array() )
+    {
+        $this->di['modelsMetadata'] = function()
+        {
             return new PhMetadataMemory();
         };
     }
@@ -311,7 +325,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initView( $options = array() ) {
+    protected function initView( $options = array() )
+    {
         
         $config = $this->di['config'];
         $di     = $this->di;
@@ -319,7 +334,8 @@ class Bootstrap {
         /**
         * Setup the view service
         */
-        $this->di['view'] = function () use ($config, $di) {
+        $this->di['view'] = function() use ($config, $di)
+        {
 
             $view = new PhView();
             $view->setViewsDir($config->application->viewsDir);
@@ -363,7 +379,8 @@ class Bootstrap {
     {
         $config = $this->di['config'];
 
-        $this->di['viewCache'] = function () use ($config) {
+        $this->di['viewCache'] = function () use ($config)
+        {
 
             // Get the parameters
             $frontCache      = new PhCacheFront(array('lifetime' => $config->cache->lifetime));
@@ -385,11 +402,13 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initLog( $options = array() ) {
+    protected function initLog( $options = array() )
+    {
 
         $config = $this->di['config'];
 
-        $this->di['logger'] = function () use ($config) {
+        $this->di['logger'] = function () use ($config)
+        {
 
             $logger = new PhLogFileAdapter($config->application->logDir . "/app.log");
 
@@ -404,7 +423,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initUtils( $options = array() ) {
+    protected function initUtils( $options = array() )
+    {
 
         $config = $this->di['config'];
 
@@ -427,7 +447,8 @@ class Bootstrap {
     *
     * @param array $options
     */
-    protected function initDebug( $options = array() ) {
+    protected function initDebug( $options = array() )
+    {
         
         $config = $this->di['config'];
 

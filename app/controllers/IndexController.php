@@ -1,15 +1,18 @@
 <?php
 
-class IndexController extends \ControllerBase {
+class IndexController extends \ControllerBase
+{
 
     /*
     * This method is executed first before any other methods
     */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Dashboard';
@@ -23,7 +26,8 @@ class IndexController extends \ControllerBase {
     /**
     * Catch page not found (404)
     */
-    public function notFoundAction() {
+    public function notFoundAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Error 404';
@@ -39,7 +43,8 @@ class IndexController extends \ControllerBase {
     /**
     * Catch access denied (403) for non admins
     */
-    public function forbiddenAction() {
+    public function forbiddenAction()
+    {
 
         $this->response->setHeader(403, 'Forbidden');
         $this->view->pick('error/forbidden');
@@ -49,7 +54,8 @@ class IndexController extends \ControllerBase {
     /**
     * Catch Internal Server Error (500)
     */
-    public function internalServerErrorAction() {
+    public function internalServerErrorAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Error 500';

@@ -4,16 +4,19 @@
 * Sign In, Sign out, Reset password, New sign up
 */
 
-class AccessController extends \ControllerBase {
+class AccessController extends \ControllerBase
+{
 
     /*
     * This method is executed first before any other methods
     */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
     }
 
-    private function _registerSession($user) {
+    private function _registerSession($user)
+    {
         $this->session->set('auth', array(
             'id'         => $user->id,
             'email'      => $user->username,
@@ -26,7 +29,8 @@ class AccessController extends \ControllerBase {
     /**
     * Signin Page
     */
-    public function signinAction() {
+    public function signinAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Sign In';
@@ -68,7 +72,8 @@ class AccessController extends \ControllerBase {
     /**
     * Sign out
     */
-    public function signoutAction() {
+    public function signoutAction()
+    {
 
         // Destroy the whole session
         $this->session->destroy();
@@ -83,7 +88,8 @@ class AccessController extends \ControllerBase {
     /**
     * Forgot Password
     */
-    public function forgotPasswordAction() {
+    public function forgotPasswordAction()
+    {
         
         // set page title
         $this->view->pageTitle = 'Forgot Password';
@@ -154,7 +160,8 @@ class AccessController extends \ControllerBase {
     /**
     * Reset Password
     */
-    public function resetPasswordAction() {
+    public function resetPasswordAction()
+    {
         
         // set page title
         $this->view->pageTitle = 'Reset Password';

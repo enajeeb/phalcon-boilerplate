@@ -2,7 +2,8 @@
 use Phalcon\Mvc\Model\Validator\InclusionIn,
     Phalcon\Mvc\Model\Validator\Uniqueness;
 
-class Users extends \ModelBase {
+class Users extends \ModelBase
+{
 
     const ROLE_ADMIN = 'admin';
     const ROLE_USER  = 'user';
@@ -21,14 +22,16 @@ class Users extends \ModelBase {
     public $modified;
     public $modified_by;
 
-    public function initialize() {
+    public function initialize()
+    {
 
         // relationships
         $this->belongsTo("group_id", "Groups", "id");
 
     }
 
-    public function validation() {
+    public function validation()
+    {
 
         $this->validate(new Uniqueness(
             array(

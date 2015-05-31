@@ -1,11 +1,13 @@
 <?php
 
-class UserController extends \ControllerBase {
+class UserController extends \ControllerBase
+{
 
     /*
     * This method is executed first before any other methods
     */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
 
         // breadcrumb
@@ -16,7 +18,8 @@ class UserController extends \ControllerBase {
         $this->view->pageTitleIcon = '<i class="fa-fw fa fa-user"></i>';
     }
 
-    public function indexAction() {
+    public function indexAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Users';
@@ -125,7 +128,8 @@ class UserController extends \ControllerBase {
 
     }
 
-    public function changePasswordAction() {
+    public function changePasswordAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Password';
@@ -198,7 +202,8 @@ class UserController extends \ControllerBase {
 
     }
 
-    public function addAction() {
+    public function addAction()
+    {
 
         // set page title
         $this->view->pageTitle = 'Add User';
@@ -304,7 +309,8 @@ class UserController extends \ControllerBase {
 
     } // add
 
-    public function editAction( $id = null ) {
+    public function editAction( $id = null )
+    {
 
         if ( empty($id) ) {
             // Forward to index
@@ -448,7 +454,8 @@ class UserController extends \ControllerBase {
 
     } // edit
 
-    public function deleteAction( $id = null ) {
+    public function deleteAction( $id = null )
+    {
 
         if ( empty($id) ) {
             
@@ -497,7 +504,8 @@ class UserController extends \ControllerBase {
 
     }
 
-    public function resetPasswordAction( $id = null ) {
+    public function resetPasswordAction( $id = null )
+    {
 
         if ( empty($id) ) {
             

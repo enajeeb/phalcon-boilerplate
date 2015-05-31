@@ -5,7 +5,8 @@
 use Phalcon\DI\FactoryDefault as PhDi,
     Phalcon\Exception as PhException;
 
-class Basics {
+class Basics
+{
 
     /**
     * Prints out debug information about given variable.
@@ -17,7 +18,8 @@ class Basics {
     * @param boolean $showHtml If set to true, the method prints the debug data in a screen-friendly way.
     * @param boolean $showFrom If set to true, the method prints from where the function was called.
     */
-    public static function debug( $var = false, $showHtml = false, $showFrom = true ) {
+    public static function debug( $var = false, $showHtml = false, $showFrom = true )
+    {
     
         $di         = PhDi::getDefault();
         $config     = $di['config'];
@@ -42,7 +44,8 @@ class Basics {
     * Send email using Mandrill Service
     * Options (type, subject, toEmail, toName)
     */
-    public static function sendEmail( $options = array() ) {
+    public static function sendEmail( $options = array() )
+    {
 
         $di         = PhDi::getDefault();
         $config     = $di['config'];
@@ -124,7 +127,8 @@ EOT;
 
     }
 
-    public static function emailTemplate ( $options = array() ) {
+    public static function emailTemplate ( $options = array() )
+    {
 
         return <<<EOT
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

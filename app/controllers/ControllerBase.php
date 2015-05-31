@@ -3,7 +3,8 @@
 use Phalcon\Mvc\Controller,
     Phalcon\DI\FactoryDefault as PhDi;
 
-class ControllerBase extends Controller {
+class ControllerBase extends Controller
+{
 
     public $config;
     public $userSession;
@@ -15,7 +16,8 @@ class ControllerBase extends Controller {
         'Home'
     );
 
-    public function initialize() {
+    public function initialize()
+    {
 
         $di = PhDi::getDefault();
 
@@ -73,7 +75,8 @@ class ControllerBase extends Controller {
     /**
     * Get GET/POST parameters
     */
-    protected function getUriParameter($parameter) {
+    protected function getUriParameter($parameter)
+    {
         return $this->dispatcher->getParam($parameter);
     }
 
@@ -81,7 +84,8 @@ class ControllerBase extends Controller {
     * Create Flash Message using template
     * @param $type [success, error, warning, info]
     */
-    protected function getFlashSession( $type, $message = null, $block = false, $autoHide = false ) {
+    protected function getFlashSession( $type, $message = null, $block = false, $autoHide = false )
+    {
         
         if ( !empty($message) ) {
 

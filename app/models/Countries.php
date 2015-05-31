@@ -1,6 +1,7 @@
 <?php
 
-class Countries extends \ModelBase {
+class Countries extends \ModelBase
+{
 
     public $id;
     public $name;
@@ -9,7 +10,8 @@ class Countries extends \ModelBase {
     public $modified;
     public $modified_by;
 
-    public function initialize() {
+    public function initialize()
+    {
 
         // relationships
         

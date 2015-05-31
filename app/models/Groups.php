@@ -1,6 +1,7 @@
 <?php
 
-class Groups extends \ModelBase {
+class Groups extends \ModelBase
+{
 
     public $id;
     public $name;
@@ -10,7 +11,8 @@ class Groups extends \ModelBase {
     public $modified_by;
 
 
-    public function initialize() {
+    public function initialize()
+    {
 
     }
 

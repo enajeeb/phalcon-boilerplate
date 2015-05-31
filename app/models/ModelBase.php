@@ -2,12 +2,14 @@
 
 use Phalcon\DI\FactoryDefault as PhDi;
 
-class ModelBase extends \Phalcon\Mvc\Model {
+class ModelBase extends \Phalcon\Mvc\Model
+{
 
     /**
     * Override default interface
     */
-    public function getMessages( $filter = null ) {
+    public function getMessages( $filter = null )
+    {
         $messages = array();
         foreach (parent::getMessages() as $message) {
             switch ($message->getType()) {
@@ -32,7 +34,8 @@ class ModelBase extends \Phalcon\Mvc\Model {
     * @param {string} $columnName
     * @return {array}
     */
-    public function getEnumValues( $columnName = null ) {
+    public function getEnumValues( $columnName = null )
+    {
 
         $di = PhDi::getDefault();
 

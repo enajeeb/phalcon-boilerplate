@@ -9,9 +9,11 @@ use Phalcon\Events\Event,
     Phalcon\Acl,
     Phalcon\DI\FactoryDefault as PhDi;
 
-class Security extends Plugin {
+class Security extends Plugin
+{
 
-    public function beforeDispatch(Event $event, Dispatcher $dispatcher) {
+    public function beforeDispatch(Event $event, Dispatcher $dispatcher)
+    {
 
         $di = PhDi::getDefault();
 
@@ -87,7 +89,8 @@ EOT;
 
     }
 
-    public function getAcl() {
+    public function getAcl()
+    {
 
         // Create the ACL
         $acl = new Phalcon\Acl\Adapter\Memory();
