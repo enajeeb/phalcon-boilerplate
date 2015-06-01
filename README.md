@@ -48,6 +48,15 @@ After the above configuration, you should be able to load the page using http://
 ### MySQL
 This example uses MySQL database. Use the included sql file to setup and initailize your database.
 
+### Supporting folders
+```
+cd phalcon-boilerplate/app
+mkdir cache cache/volt cache/security
+mkdir logs
+touch logs/app.log
+chmod -R 777 cache logs
+```
+
 ### Testing Accounts
 
 The following accounts are setup in database for testing.
