@@ -67,7 +67,7 @@ The following accounts are setup in database for testing.
 | Users | user@test.com | user12345 | Access to only certain sections of the application |
 
 ## Demo
-<iframe width="640" height="480" src="https://www.youtube.com/embed/o77tm09LJwM?rel=0" frameborder="0" allowfullscreen></iframe>
+[![Phalcon Boilerplate Setup Demo](http://img.youtube.com/vi/o77tm09LJwM/0.jpg)](http://www.youtube.com/watch?v=o77tm09LJwM)
 
 ## Screen shots
 
