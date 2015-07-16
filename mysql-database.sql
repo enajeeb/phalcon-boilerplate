@@ -1,4 +1,15 @@
+DROP DATABASE IF EXISTS `phalcon_boilerplate`;
 CREATE DATABASE `phalcon_boilerplate` DEFAULT CHARACTER SET `utf8`;
+
+USE `mysql`;
+CREATE USER 'phalcon'@'localhost' IDENTIFIED BY 'phalcon';
+
+INSERT INTO `db`
+(`Host`, `Db`, `User`, `Select_priv`, `Insert_priv`, `Update_priv`, `Delete_priv`, `Create_priv`, `Drop_priv`, `Grant_priv`, `References_priv`, `Index_priv`, `Alter_priv`, `Create_tmp_table_priv`, `Lock_tables_priv`, `Create_view_priv`, `Show_view_priv`, `Create_routine_priv`, `Alter_routine_priv`, `Execute_priv`)
+VALUES
+('localhost', 'phalcon_boilerplate', 'phalcon', 'Y', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N');
+
+FLUSH PRIVILEGES;
 
 USE `phalcon_boilerplate`;
 
@@ -293,4 +304,5 @@ INSERT INTO `users` (`id`, `group_id`, `first_name`, `last_name`, `username`, `p
 VALUES
     (1,1,'Admin','Account','admin@test.com','6209371d05b9f45084754a250def0c9665731e66a75f0dcf0d5d3bbd6bb7120c',NULL,NULL,'active','2015-01-09 00:00:00','2015-01-09 00:00:00','admin@test.com'),
     (2,2,'User','Account','user@test.com','a62fb8174daa033d0800ff88c4dfaaa9a7ebdb0f0bffdfcabd8fa73d7f0ae387',NULL,NULL,'active','2015-01-09 00:00:00','2015-01-09 00:00:00','admin@test.com');
+
 
