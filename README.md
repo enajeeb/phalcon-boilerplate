@@ -43,7 +43,7 @@ Here is sample configuration to get the site running on port 9003.
         </Directory>
     </VirtualHost>
 
-After the above configuration, you should be able to load the page using http://localhost:9003
+After the above configuration, you should be able to load the page using [http://localhost:9003](http://localhost:9003)
 
 ### MySQL
 This example uses MySQL database. Use the included sql file to setup and initailize your database.
@@ -65,6 +65,9 @@ The following accounts are setup in database for testing.
 | :-------- | :---- | :------- | :---- |
 | Adminstrators | admin@test.com | admin12345 | Access to all sections of the application |
 | Users | user@test.com | user12345 | Access to only certain sections of the application |
+
+## Demo
+<iframe width="640" height="480" src="https://www.youtube.com/embed/o77tm09LJwM?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## Screen shots
 
