@@ -193,15 +193,10 @@ class Bootstrap
             )
         );
 
-        // Register third party classes
-        $loader->registerClasses(
-            array(
-                "PHPMailer" => $config->application->vendorDir . "/phpmailer/phpmailer/class.phpmailer.php",
-                "PHPExcel"  => $config->application->vendorDir . "/phpoffice/phpexcel/Classes/PHPExcel.php"
-            )
-        );
-
         $loader->register();
+
+        // Composer Autoloading
+        require_once $config->application->vendorDir . '/autoload.php';
 
         // Dump it in the DI to reuse it
         $this->di['loader'] = $loader;
@@ -238,7 +233,7 @@ class Bootstrap
 
         $config = $this->di['config'];
 
-        $this->di['router'] = function() use ($config)
+        $this->di['router'] = function () use ($config)
         {
 
             // Create the router without default routes (false)
@@ -272,7 +267,7 @@ class Bootstrap
         $config = $this->di['config'];
 
         // setup database service
-        $this->di['db'] = function() use ($config)
+        $this->di['db'] = function () use ($config)
         {
 
             $connection = new PhMysql(
@@ -291,7 +286,7 @@ class Bootstrap
                 $logger = new PhLogFileAdapter($config->application->logDir . "/db.log");
 
                 //Listen all the database events
-                $eventsManager->attach('db', function($event, $connection) use ($logger)
+                $eventsManager->attach('db', function ($event, $connection) use ($logger)
                 {
                     if ($event->getType() == 'beforeQuery') {
                         $logger->log($connection->getSQLStatement(), \Phalcon\Logger::INFO);
@@ -334,7 +329,7 @@ class Bootstrap
         /**
         * Setup the view service
         */
-        $this->di['view'] = function() use ($config, $di)
+        $this->di['view'] = function () use ($config, $di)
         {
 
             $view = new PhView();

@@ -66,7 +66,7 @@ The following accounts are setup in database for testing.
 | Adminstrators | admin@test.com | admin12345 | Access to all sections of the application |
 | Users | user@test.com | user12345 | Access to only certain sections of the application |
 
-## Demo
+## Demo Video
 [![Phalcon Boilerplate Setup Demo](http://img.youtube.com/vi/o77tm09LJwM/0.jpg)](http://www.youtube.com/watch?v=o77tm09LJwM)
 
 ## Screen shots
@@ -90,3 +90,8 @@ I am using minimal features of a template from [bootstraphunter](https://bootstr
 * Upgraded to Phalcon 2.0.0
 * Added support for Composer (Dependency Manager for PHP)
 * Cleaned up code to comply with [PSR-1](http://www.php-fig.org/psr/psr-1/) and [PSR-2](http://www.php-fig.org/psr/psr-2/)
+
+### Version 1.0.2 (Date: Sep 07, 2015)
+
+#### What's New
+* Added support for Composer Autoloading
