@@ -63,7 +63,7 @@ The following accounts are setup in database for testing.
 
 | User Type | Email | Password | Notes |
 | :-------- | :---- | :------- | :---- |
-| Adminstrators | admin@test.com | admin12345 | Access to all sections of the application |
+| Administrators | admin@test.com | admin12345 | Access to all sections of the application |
 | Users | user@test.com | user12345 | Access to only certain sections of the application |
 
 ## Demo Video
