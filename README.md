@@ -23,6 +23,7 @@ On my local machine I have the following versions installed.
 * PHP 5.5.20
 * Phalcon 2.0.0
 * MySQL 5.5.31
+* PHP Composer
 
 ### Phalcon Framework
 I assume you already have Phalcon framework installed. If not, then follow instructions at [Phalcon Website](http://phalconphp.com).
@@ -56,7 +57,10 @@ mkdir logs
 touch logs/app.log
 chmod -R 777 cache logs
 ```
-
+### Run Composer
+```
+php composer.phar install
+```
 ### Testing Accounts
 
 The following accounts are setup in database for testing.
